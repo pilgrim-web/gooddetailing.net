@@ -1,0 +1,100 @@
+media:
+  input: assets/img
+  output: assets/img
+
+content:
+  - name: site
+    label: Site Content
+    type: file
+    path: content/site.json
+    fields:
+      - name: businessName
+        label: Business Name
+        type: text
+        required: true
+
+      - name: heroHeadline
+        label: Hero Headline
+        type: object
+        fields:
+          - { name: en, label: English, type: text, required: true }
+          - { name: es, label: Spanish, type: text, required: true }
+          - { name: ko, label: Korean, type: text, required: true }
+
+      - name: heroSubheadline
+        label: Hero Subheadline
+        type: object
+        fields:
+          - { name: en, label: English, type: text }
+          - { name: es, label: Spanish, type: text }
+          - { name: ko, label: Korean, type: text }
+
+      - name: aboutStory
+        label: About Story
+        type: object
+        fields:
+          - { name: en, label: English, type: textarea }
+          - { name: es, label: Spanish, type: textarea }
+          - { name: ko, label: Korean, type: textarea }
+
+      - name: visionStatement
+        label: Vision Statement
+        type: object
+        fields:
+          - { name: en, label: English, type: textarea }
+          - { name: es, label: Spanish, type: textarea }
+          - { name: ko, label: Korean, type: textarea }
+
+      - name: services
+        label: Services
+        type: list
+        fields:
+          - name: title
+            label: Service Title
+            type: object
+            fields:
+              - { name: en, label: English, type: text, required: true }
+              - { name: es, label: Spanish, type: text, required: true }
+              - { name: ko, label: Korean, type: text, required: true }
+
+          - name: price
+            label: Price
+            type: text
+            required: true
+
+          - name: bullets
+            label: Bullet Points
+            type: object
+            fields:
+              - name: en
+                label: English (one per line)
+                type: textarea
+              - name: es
+                label: Spanish (one per line)
+                type: textarea
+              - name: ko
+                label: Korean (one per line)
+                type: textarea
+
+      - name: contact
+        label: Contact
+        type: object
+        fields:
+          - { name: ceo, label: CEO, type: text }
+          - { name: phone, label: Phone, type: text }
+          - name: addressLines
+            label: Address Lines
+            type: list
+            fields:
+              - { name: line, label: Line, type: text }
+
+      - name: stripePaymentLink
+        label: Stripe Payment Link URL
+        type: text
+
+      - name: seo
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: Meta Title, type: text }
+          - { name: description, label: Meta Description, type: textarea }

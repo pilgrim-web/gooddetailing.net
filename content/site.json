@@ -1,0 +1,90 @@
+{
+  "businessName": "Good Car Detailing",
+  "heroHeadline": {
+    "en": "Luxury-Level Detailing for Daily Drivers",
+    "es": "Detalle de lujo para tu auto diario",
+    "ko": "일상 차량을 위한 프리미엄 디테일링"
+  },
+  "heroSubheadline": {
+    "en": "Mirror gloss, spotless interiors, and a finish that turns heads.",
+    "es": "Brillo espejo, interiores impecables y un acabado que impresiona.",
+    "ko": "거울처럼 빛나는 광택과 깔끔한 실내, 시선을 사로잡는 마감."
+  },
+  "aboutStory": {
+    "en": "Good Car Detailing was built on a simple promise: treat every vehicle like a showcase car. We focus on meticulous prep, careful product selection, and consistent results. Our team works clean, fast, and detail-first, so your vehicle looks better and stays protected longer.",
+    "es": "Good Car Detailing nació con una promesa simple: tratar cada vehículo como un auto de exhibición. Nos enfocamos en la preparación meticulosa, la selección cuidadosa de productos y resultados consistentes. Trabajamos limpio, rápido y con enfoque en los detalles para que tu vehículo luzca mejor y se mantenga protegido por más tiempo.",
+    "ko": "Good Car Detailing은 모든 차량을 쇼카처럼 대하겠다는 약속으로 시작했습니다. 우리는 꼼꼼한 준비, 신중한 제품 선택, 그리고 일관된 결과에 집중합니다. 깔끔하고 빠르며 디테일을 최우선으로 작업하여 차량이 더 아름답고 오래 보호되도록 합니다."
+  },
+  "visionStatement": {
+    "en": "Our vision is to set the local standard for premium detailing by delivering flawless finishes, transparent pricing, and a professional client experience from start to finish.",
+    "es": "Nuestra visión es establecer el estándar local del detallado premium con acabados impecables, precios transparentes y una experiencia profesional de principio a fin.",
+    "ko": "우리의 비전은 완벽한 마감, 투명한 가격, 그리고 시작부터 끝까지 전문적인 고객 경험을 통해 지역 최고의 디테일링 기준을 세우는 것입니다."
+  },
+  "services": [
+    {
+      "title": {
+        "en": "Wash & Vac",
+        "es": "Lavado y Aspirado",
+        "ko": "세차 & 진공"
+      },
+      "price": "$39",
+      "bullets": {
+        "en": "Hand wash and rinse\nWheel face cleaning\nInterior vacuum\nGlass cleaned inside and out",
+        "es": "Lavado a mano y enjuague\nLimpieza de llantas\nAspirado interior\nVidrios limpios por dentro y por fuera",
+        "ko": "손세차 및 헹굼\n휠 표면 세척\n실내 진공 청소\n실내외 유리 청소"
+      }
+    },
+    {
+      "title": {
+        "en": "Executive Detail",
+        "es": "Detalle Ejecutivo",
+        "ko": "이그제큐티브 디테일"
+      },
+      "price": "$199",
+      "bullets": {
+        "en": "Foam pre-soak and hand wash\nClay bar decontamination\nOne-step polish\nInterior deep clean",
+        "es": "Prelavado con espuma y lavado a mano\nDescontaminación con clay bar\nPulido de una etapa\nLimpieza profunda del interior",
+        "ko": "폼 프리소크 및 손세차\n클레이바 오염 제거\n1단계 폴리싱\n실내 딥클린"
+      }
+    },
+    {
+      "title": {
+        "en": "Executive Detail PLUS",
+        "es": "Detalle Ejecutivo PLUS",
+        "ko": "이그제큐티브 디테일 PLUS"
+      },
+      "price": "$249",
+      "bullets": {
+        "en": "Two-step paint correction\nEngine bay wipe-down\nTrim restoration\nPremium sealant",
+        "es": "Corrección de pintura en dos pasos\nLimpieza del compartimento del motor\nRestauración de molduras\nSellador premium",
+        "ko": "2단계 페인트 보정\n엔진룸 정리\n트림 복원\n프리미엄 실란트"
+      }
+    },
+    {
+      "title": {
+        "en": "Interior Detail",
+        "es": "Detalle Interior",
+        "ko": "실내 디테일"
+      },
+      "price": "$149",
+      "bullets": {
+        "en": "Shampoo seats and carpets\nSteam clean surfaces\nLeather conditioning\nOdor neutralization",
+        "es": "Lavado de asientos y alfombras\nLimpieza con vapor de superficies\nAcondicionamiento de cuero\nNeutralización de olores",
+        "ko": "시트 및 카펫 샴푸\n표면 스팀 클리닝\n가죽 컨디셔닝\n냄새 중화"
+      }
+    }
+  ],
+  "contact": {
+    "ceo": "Mark Flo",
+    "phone": "(555) 019-2026",
+    "addressLines": [
+      { "line": "2140 Luxury Lane" },
+      { "line": "San Diego, CA 92101" }
+    ]
+  },
+  "stripePaymentLink": "https://buy.stripe.com/your-link",
+  "seo": {
+    "title": "Good Car Detailing | Premium Auto Detailing",
+    "description": "Luxury-level car detailing with a mirror-gloss finish, deep interior care, and professional service in San Diego."
+  }
+}

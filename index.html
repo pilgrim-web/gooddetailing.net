@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta id="meta-description" name="description" content="" />
+  <meta property="og:type" content="website" />
+  <meta id="og-title" property="og:title" content="" />
+  <meta id="og-description" property="og:description" content="" />
+  <meta property="og:image" content="assets/img/home.png" />
+  <meta id="twitter-title" name="twitter:title" content="" />
+  <meta id="twitter-description" name="twitter:description" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preload" href="assets/img/home.png" as="image" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <title>Good Car Detailing</title>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home">
+        <img src="assets/img/logo.png" alt="Good Car Detailing logo" loading="lazy" />
+        <span data-field="businessName">Good Car Detailing</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="#home" data-i18n="nav.home">Home</a>
+        <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+        <a class="nav-link" href="#service" data-i18n="nav.service">Service</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="lang">
+        <button class="lang-trigger" id="lang-trigger" aria-haspopup="true" aria-expanded="false" data-i18n-aria="accessibility.languageSwitcher">
+          <span data-i18n="language">Language</span> ▾
+        </button>
+        <div class="lang-menu" id="lang-menu" role="menu">
+          <button type="button" data-lang="en" role="menuitem">English</button>
+          <button type="button" data-lang="es" role="menuitem">Español</button>
+          <button type="button" data-lang="ko" role="menuitem">한국어</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="section bg-home">
+    <div class="section-content">
+      <div class="hero reveal">
+        <h1 data-field="businessName">Good Car Detailing</h1>
+        <h2 data-field="heroHeadline"></h2>
+        <p data-field="heroSubheadline"></p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#service" data-i18n="heroCtaServices">View Services</a>
+          <a class="btn btn-secondary" href="#contact" data-i18n="heroCtaQuote">Get Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section bg-about">
+    <div class="section-content section-grid">
+      <div class="panel reveal">
+        <h2 class="section-title" data-i18n="aboutTitle">Our Story</h2>
+        <p data-field="aboutStory"></p>
+      </div>
+      <div class="panel reveal">
+        <h2 class="section-title" data-i18n="visionTitle">Vision Statement</h2>
+        <p data-field="visionStatement"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="section bg-service">
+    <div class="section-content">
+      <div class="panel reveal">
+        <h2 class="section-title">Services & Pricing</h2>
+        <div id="services-grid"></div>
+        <p class="note" data-i18n="pricesNote">Prices may vary by vehicle condition.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section bg-contact">
+    <div class="section-content">
+      <div class="panel contact-grid reveal">
+        <div class="contact-info">
+          <h2 class="section-title">Contact</h2>
+          <p><strong>CEO</strong>: <span data-field="contactCeo"></span></p>
+          <p><strong>Phone</strong>: <span data-field="contactPhone"></span></p>
+          <div>
+            <strong>Address</strong>
+            <div data-field="addressLines"></div>
+          </div>
+          <a class="btn btn-primary" id="stripe-link" href="#" target="_blank" rel="noopener">Pay with Stripe</a>
+        </div>
+        <div>
+          <h3 class="section-subtitle">Request a Quote</h3>
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="tel" name="phone" placeholder="Phone" />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Request</button>
+          </form>
+          <a class="btn btn-secondary" href="#home" style="margin-top:14px">Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p data-i18n="footer.rights">All rights reserved.</p>
+  </footer>
+
+  <script id="jsonld" type="application/ld+json"></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
