@@ -19,15 +19,15 @@ content:
         fields:
           - { name: en, label: English, type: text, required: true }
           - { name: es, label: Spanish, type: text, required: true }
-          - { name: ko, label: Korean, type: text, required: true }
+          - { name: ko, label: Korean,  type: text, required: true }
 
       - name: heroSubheadline
         label: Hero Subheadline
         type: object
         fields:
-          - { name: en, label: English, type: text }
-          - { name: es, label: Spanish, type: text }
-          - { name: ko, label: Korean, type: text }
+          - { name: en, label: English, type: textarea }
+          - { name: es, label: Spanish, type: textarea }
+          - { name: ko, label: Korean,  type: textarea }
 
       - name: aboutStory
         label: About Story
@@ -35,7 +35,7 @@ content:
         fields:
           - { name: en, label: English, type: textarea }
           - { name: es, label: Spanish, type: textarea }
-          - { name: ko, label: Korean, type: textarea }
+          - { name: ko, label: Korean,  type: textarea }
 
       - name: visionStatement
         label: Vision Statement
@@ -43,19 +43,19 @@ content:
         fields:
           - { name: en, label: English, type: textarea }
           - { name: es, label: Spanish, type: textarea }
-          - { name: ko, label: Korean, type: textarea }
+          - { name: ko, label: Korean,  type: textarea }
 
       - name: services
         label: Services
         type: list
         fields:
           - name: title
-            label: Service Title
+            label: Title
             type: object
             fields:
               - { name: en, label: English, type: text, required: true }
               - { name: es, label: Spanish, type: text, required: true }
-              - { name: ko, label: Korean, type: text, required: true }
+              - { name: ko, label: Korean,  type: text, required: true }
 
           - name: price
             label: Price
@@ -63,18 +63,12 @@ content:
             required: true
 
           - name: bullets
-            label: Bullet Points
+            label: Bullets
             type: object
             fields:
-              - name: en
-                label: English (one per line)
-                type: textarea
-              - name: es
-                label: Spanish (one per line)
-                type: textarea
-              - name: ko
-                label: Korean (one per line)
-                type: textarea
+              - { name: en, label: English (one per line), type: textarea }
+              - { name: es, label: Spanish (one per line), type: textarea }
+              - { name: ko, label: Korean (one per line),  type: textarea }
 
       - name: contact
         label: Contact
@@ -89,7 +83,7 @@ content:
               - { name: line, label: Line, type: text }
 
       - name: stripePaymentLink
-        label: Stripe Payment Link URL
+        label: Stripe Payment Link
         type: text
 
       - name: seo
