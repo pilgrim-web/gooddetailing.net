@@ -140,9 +140,64 @@
     </div>
   </section>
 
-  <footer>
-    <p data-i18n="footer.rights">All rights reserved.</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <!-- Column 1: Brand -->
+      <div class="footer-col footer-brand">
+        <img src="assets/img/logo.png" alt="Good Detailing logo" class="footer-logo" />
+        <p class="footer-name">Good Detailing</p>
+        <p class="footer-muted" data-i18n="footer.brandServing"></p>
+      </div>
+
+      <!-- Column 2: Navigation -->
+      <div class="footer-col footer-nav">
+        <h4 data-i18n="footer.quickLinks"></h4>
+        <ul>
+          <li><a href="#home" data-i18n="nav.home"></a></li>
+          <li><a href="#about" data-i18n="nav.about"></a></li>
+          <li><a href="#service" data-i18n="nav.service"></a></li>
+          <li><a href="#contact" data-i18n="nav.contact"></a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact / CTA -->
+      <div class="footer-col footer-cta">
+        <h4 data-i18n="footer.contact"></h4>
+        <p class="footer-muted">949-000-0000</p>
+        <button class="footer-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})"
+          data-i18n="footer.requestQuote"></button>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <span>© <span id="footer-year"></span> Good Detailing. <span data-i18n="footer.rights"></span></span>
+      <div class="footer-legal">
+        <button class="link-btn" onclick="openModal('privacyModal')" data-i18n="footer.privacy"></button>
+        <button class="link-btn" onclick="openModal('termsModal')" data-i18n="footer.terms"></button>
+      </div>
+    </div>
   </footer>
+
+  <!-- Privacy Modal -->
+  <div class="modal" id="privacyModal" aria-hidden="true">
+    <div class="modal-overlay" onclick="closeModal('privacyModal')"></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <h3 data-i18n="footer.modalPrivacyTitle"></h3>
+      <p data-i18n="footer.privacyText"></p>
+      <button class="modal-close" onclick="closeModal('privacyModal')" data-i18n="footer.modalClose"></button>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div class="modal" id="termsModal" aria-hidden="true">
+    <div class="modal-overlay" onclick="closeModal('termsModal')"></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <h3 data-i18n="footer.modalTermsTitle"></h3>
+      <p data-i18n="footer.termsText"></p>
+      <button class="modal-close" onclick="closeModal('termsModal')" data-i18n="footer.modalClose"></button>
+    </div>
+  </div>
 
   <script id="jsonld" type="application/ld+json"></script>
   <script src="assets/js/i18n.js" defer></script>

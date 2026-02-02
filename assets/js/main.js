@@ -12,6 +12,12 @@
     if (el) el.textContent = value;
   };
 
+  const setTextAll = (sel, value) => {
+    qsa(sel).forEach((el) => {
+      el.textContent = value;
+    });
+  };
+
   const setMeta = (id, content) => {
     const el = document.getElementById(id);
     if (el && content) el.setAttribute("content", content);
@@ -54,7 +60,7 @@
     const data = state.site;
     const lang = state.lang;
 
-    setText("[data-field='businessName']", data.businessName);
+    setTextAll("[data-field='businessName']", data.businessName);
     setText("[data-field='heroHeadline']", data.heroHeadline?.[lang] || "");
     setText("[data-field='heroSubheadline']", data.heroSubheadline?.[lang] || "");
     setText("[data-field='aboutStory']", data.aboutStory?.[lang] || "");
@@ -87,10 +93,10 @@
     }
 
     setText("[data-field='contactCeo']", data.contact?.ceo || "");
-    setText("[data-field='contactPhone']", data.contact?.phone || "");
+    setTextAll("[data-field='contactPhone']", data.contact?.phone || "");
 
-    const addressWrap = qs("[data-field='addressLines']");
-    if (addressWrap) {
+    const addressWraps = qsa("[data-field='addressLines']");
+    addressWraps.forEach((addressWrap) => {
       addressWrap.innerHTML = "";
       (data.contact?.addressLines || []).forEach((item) => {
         const line = typeof item === "string" ? item : item?.line;
@@ -99,7 +105,7 @@
         p.textContent = line;
         addressWrap.appendChild(p);
       });
-    }
+    });
 
     const stripeLink = qs("#stripe-link");
     if (stripeLink) {
@@ -241,7 +247,31 @@
     initLangMenu();
     initSmoothScroll();
     updateActiveNav();
+    const yearEl = qs("#footer-year");
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
   };
 
   document.addEventListener("DOMContentLoaded", init);
 })();
+
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.classList.remove("active");
+  modal.setAttribute("aria-hidden", "true");
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+  document.querySelectorAll(".modal.active").forEach((modal) => {
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+  });
+});
